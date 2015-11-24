@@ -16,33 +16,41 @@ html(lang='en')
       script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
       script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
   body
-    // Navigation
-    a#menu-toggle.btn.btn-dark.btn-lg.toggle(href='#')
-      i.fa.fa-bars
-    nav#sidebar-wrapper
-      ul.sidebar-nav
-        a#menu-close.btn.btn-light.btn-lg.pull-right.toggle(href='#')
-          i.fa.fa-times
-        li.sidebar-brand
-          a(href='#top', onclick='$("#menu-close").click();') Start Bootstrap
-        li
-          a(href='#top', onclick='$("#menu-close").click();') Home
-        li
-          a(href='#about', onclick='$("#menu-close").click();') About
-        li
-          a(href='#services', onclick='$("#menu-close").click();') Services
-        li
-          a(href='#portfolio', onclick='$("#menu-close").click();') Portfolio
-        li
-          a(href='#contact', onclick='$("#menu-close").click();') Contact
     // Header
     header#top.header
       .text-vertical-center
         h2
-          | Order sweets from famous and best bakeries in your town
-          h3 Free Bootstrap Themes & Templates
+          | Order sweets from famous and best bakeries near you in Bangalore!
           br
-          a.btn.btn-dark.btn-lg(href='#about') Click here to order
+          br
+          br
+          br
+          .btn-toolbar
+            .btn-group.dropdown(style='left: 40%; right: auto;')
+              button#citydropdown.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown',aria-haspopup="true", aria-expanded="true", style='background-color: white;width: 100%;height: 40px;text-align: center;')
+                | Select City
+                span.caret
+              ul.dropdown-menu.dropdown-menu-left(role='menu', aria-labelledby='citydropdown')
+                li(role='presentation')
+                  a(href="#" data-value="Bangalore") Bangalore
+                li(role='presentation')
+                    a(href="#" data-value="Chennai") Chennai
+            .btn-group.dropdown(style='left: 40%; right: auto;')
+              button#localitydropdown.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown',aria-haspopup="true", aria-expanded="true", style='background-color: white;width: 100%;height: 40px;text-align: center;')
+                    | Select Locality
+                    span.caret
+                ul.dropdown-menu.dropdown-menu-left(role='menu', aria-labelledby='localitydropdown')
+                    li(role='presentation')
+                        a(href="#" data-value="Marathahalli") Marathahalli
+                    li(role='presentation')
+                        a(href="#" data-value="Bellandur") Bellandur
+                    li(role='presentation')
+                        a(href="#" data-value="Koramangala") Koramangala
+                    li(role='presentation')
+                        a(href="#" data-value="Mahadevapura") Mahadevapura
+                    li(role='presentation')
+                        a(href="#" data-value="SilkBoard") SilkBoard
+
     // About
     section#about.about
       .container
@@ -93,85 +101,17 @@ html(lang='en')
                   h4
                     strong Delivery & Pay
                   p We deliver your order at the location you want and you pay to us
-            // /.row (nested)
-          // /.col-lg-10
-        // /.row
-      // /.container
-    .btn-toolbar
-      .btn-group.dropdown
-        button#dropdownMenu1.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', style='background-color: white;width: 100%;height: 40px;text-align: center;')
-          | Select City
-          span.caret
-        ul.dropdown-menu.dropdown-menu-left(role='menu', aria-labelledby='dropdownMenu1')
-          li(role='presentation')
-            a(role='menuitem', tabindex='-1', href='#') Bangalore
-          li(role='presentation')
-            a(role='menuitem', tabindex='-1', href='#') Chennai
-    // Callout
-    aside.callout
-      .text-vertical-center
-        h1 Vertically Centered Text
-    // Portfolio
-    section#portfolio.portfolio
-      .container
-        .row
-          .col-lg-10.col-lg-offset-1.text-center
-            h2 Our Work
-            hr.small
-            .row
-              .col-md-6
-                .portfolio-item
-                  a(href='#')
-                    img.img-portfolio.img-responsive(src='images/portfolio-1.jpg')
-              .col-md-6
-                .portfolio-item
-                  a(href='#')
-                    img.img-portfolio.img-responsive(src='images/portfolio-2.jpg')
-              .col-md-6
-                .portfolio-item
-                  a(href='#')
-                    img.img-portfolio.img-responsive(src='images/portfolio-3.jpg')
-              .col-md-6
-                .portfolio-item
-                  a(href='#')
-                    img.img-portfolio.img-responsive(src='images/portfolio-4.jpg')
-            // /.row (nested)
-            a.btn.btn-dark(href='#') View More Items
-          // /.col-lg-10
-        // /.row
-      // /.container
-    // Call to Action
-    aside.call-to-action.bg-primary
-      .container
-        .row
-          .col-lg-12.text-center
-            h3 The buttons below are impossible to resist.
-            a.btn.btn-lg.btn-light(href='#') Click Me!
-            a.btn.btn-lg.btn-dark(href='#') Look at Me!
-    // Map
-    section#contact.map
-      iframe(width='100%', height='100%', frameborder='0', scrolling='no', marginheight='0', marginwidth='0', src='https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&aq=0&oq=twitter&sll=28.659344,-81.187888&sspn=0.128789,0.264187&ie=UTF8&hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&t=m&z=15&iwloc=A&output=embed')
-      br
-      small
-        a(href='https://maps.google.com/maps?f=q&source=embed&hl=en&geocode=&q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&aq=0&oq=twitter&sll=28.659344,-81.187888&sspn=0.128789,0.264187&ie=UTF8&hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&t=m&z=15&iwloc=A')
-    // Footer
+     // Footer
     footer
       .container
         .row
           .col-lg-10.col-lg-offset-1.text-center
             h4
-              strong Start Bootstrap
-            p
-              | 3481 Melrose Place
-              br
-              | Beverly Hills, CA 90210
+              strong ButterHubs.com
             ul.list-unstyled
               li
-                i.fa.fa-phone.fa-fw
-                |  (123) 456-7890
-              li
                 i.fa.fa-envelope-o.fa-fw
-                a(href='mailto:name@example.com') name@example.com
+                a(href='mailto:name@example.com') butterhubs@butterhubs.com
             br
             ul.list-inline
               li
@@ -198,17 +138,7 @@ html(lang='en')
         $("#sidebar-wrapper").toggleClass("active");
       });
       // Scrolls to the selected menu item on the page
-      $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-          if (location.pathname.replace(/^\\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
-        }
-      });
+      $(".dropdown-menu li a").click(function () {
+          $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+          $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
       });
